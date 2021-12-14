@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple web Development Template</title>
+	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Caveat';font-size:22px;
+			box-sizing: border-box;
+		}
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+		.nav-list li a:hover {
+			color: grey;
+		}
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+		.firstsection {
+			background-color: rgb(77, 0, 128);
+			height: 400px;
+		}
+		.secondsection {
+			background-color: rgb(186, 85, 253);
+			height: 400px;
+		}
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.secondhalf {
+			width: 30%;
+		}
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+		.text-big {
+			font-weight: bold;
+			font-size: 33px;
+			font-family: 'Caveat';font-size: 33px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none ;
+			color: white;
+			cursor: pointer;
+		}
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100;
+			margin: auto;
+			color: white;
+			background-color: rgb(77, 0, 128);
+		}
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+		.paras {
+			padding: 0px 65px;
+		}
+		.thumbnail img {
+			width: 500px;
+			margin-top: 19px;
+			height: 300px;
+		}
+		.center {
+			text-align: center;
+		}
+		body{
+			width: 100%;
+			color: #000;
+			font-family: 'Caveat';font-size:22px;
+			position: relative;
+			background-color: rgb(187, 179, 179);
+		}
+		.footer {
+			position: relative;
+			width: 100%;
+			height: 50px;
+			padding: 30px;
+			display: flex;
+			justify-content: space-between;
+			background: rgb(0, 0, 0);
+			flex-wrap: wrap;
+		}
+	    .footer_info{
+          width: 90%;
+		  margin: 0 auto;
+		  display: flex;
+		  padding: 50px 0;
+		}
+		.footer_info .footer_width{
+			padding: 0 15px;
+		}
+		.footer_info h2{
+			margin-bottom: 20px;
+
+		}
+		.about , .contact{
+			width: 40%;
+		}
+		.link{
+			width: 20%;
+		}
+		.social-media{
+			margin-top: 30px;
+		}
+		.social-media ul{
+			display: flex;
+		}
+		.social-media ul li a{
+			display: inline-block;
+			margin-right: 50px;
+			width: 50px;
+			height: 50px;
+			padding-top: 12px;
+			background-color: transparent;
+			border: 1px solid #fff;
+			text-align: center;
+		}
+		.social-media ul li a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+		.link ul li{
+			margin-bottom: 15px;
+			font-size: 20px;
+		}
+		.link ul li a:hover{
+			color: #000;
+		}
+		.Contact ul li{
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+		.Contact ul li span{
+			margin-right: 15px;
+		}
+		.copy-right 
+		{
+			padding: 15px 0;
+			text-align: center;
+			background-color: #fff;
+		}
+		@media screen and (max-width:992px) {
+			.about , .contact{
+				width:35% ;
+			}
+			.link{
+				width: 30%;
+			}
+		}
+		@media screen and (max-width:767px){
+			.about ,.contact , .link{
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			.footer_info{
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "img">
+			</div>
+			<li><a class ="btn btn-success" href="anotherhomepage.html" target="_blank" >HOME</a></li>
+			<li><a class="btn btn-success"  href="anotheraboutpage.html" target="_blank">ABOUT</a></li>
+			<li><a class="btn btn-success" href="anothercoursepage.html" target="_blank">COURSES</a></li>
+		</ul>
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">Web Technology</h1>
+				<p class="text-small">
+					HTML stands for HyperText Markup Language.
+					It is used to design web pages using a markup
+					language. HTML is the combination of Hypertext
+					and Markup language. Hypertext defines the
+					link between the web pages. A markup language
+					is used to define the text document within tag
+					which defines the structure of web pages.
+					HTML is a markup language that is used by the
+					browser to manipulate text, images, and other
+					content to display it in the required format.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="program">
+					C Programming
+				</h1>
+				<p class="text-small">
+					C is a procedural programming language. It
+					was initially developed by Dennis Ritchie
+					as a system programming language to write
+					operating system. The main features of C
+					language include low-level access to memory,
+					simple set of keywords, and clean style,
+					these features make C language suitable for
+					system programming like operating system or
+					compiler development.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="paras">
+			<h1 class="sectionTag text-big">Java</h1>
+			<p class="sectionSubTag text-small">
+				Java has been one of the most popular
+				programming language for many years.
+				Java is Object Oriented. However it is
+				not considered as pure object oriented
+				as it provides support for primitive
+				data types (like int, char, etc) The
+				Java codes are first compiled into byte
+				code (machine independent code). Then
+				the byte code is run on Java Virtual
+				Machine (JVM) regardless of the
+				underlying architecture.
+			</p>
+		</div>
+		<div class="thumbnail">
+			<img src= "https://mobirise.com/html-templates/simple-html-website-template/assets/images/apple-laptop-macbook-pro-notebook-600x400.jpg" alt="laptop image">
+		</div>
+	</section>
+	<footer>
+
+		<div class="footer_info">
+			<div class="footer_width about">
+				<h2>About Us</h2>
+				<p>
+					This free lorem ipsum generator lets you choose how many sentences, <br>
+					paragraphs or list items you want. <br>
+					You can also select to include HTML markup and specify how big the text should be.<br>
+					 It currently supports standard Lorem Ipsum, Marvel Ipsum, Batman Ipsum and Pokemon Ipsum.<br>
+				</p>
+			<div class ="social media">
+			<ul>
+				<h2>Social Media Links</h2>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>	
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>	
+<li><a href="#"><i class="fab fa-youtube"></i></a></li>	
+			</ul>
+		</div>
+			</div>
+		<div class="footer_width link">
+			<h2>Quick links</h2>
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">FQA</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer_width Contact">
+			<h2>Contact details</h2>
+			<ul class="info">
+				<li>
+					<span><i class="fas fa-phone"></i></span>
+					<p>
+						<a href="tel:12345678900">+91 12345678900</a><br>
+						<a href="tel:12345678900">+91 12345678900 </a>
+					</p>
+				</li>
+				<li>
+					<span><i class="fas fa-map-marker"></i></span>
+					<span>#13,vidyasagar layout, 
+						saraipalya,<br>
+						Dr. SRK nagar post,<br>
+						 Bangalore-560077. </span>
+				</li>
+				<li>
+					<span><i class="far fa-envelope"></i></span>
+					<p>
+						<a href="mailto:internship@gmail.com">contact@lueurtech.com</a>
+					</p>
+				</li>
+			</ul>
+		</div>	
+	</footer>
+	<div class="copy-right">
+		<p>Copyright © 2021 LueurTech Software Solutions | Powered by LueurTech Software Solutions</p>
+	</div>
+</body>
+</html>
